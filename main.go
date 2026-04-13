@@ -259,7 +259,11 @@ func main() {
 	myWindow := myApp.NewWindow("Damas")
 
 	myWindow.Canvas().SetOnTypedKey(func(key *fyne.KeyEvent) {
-		if key.Name == fyne.KeyF11 {
+		switch key.Name {
+		case fyne.KeyF5:
+			setupGame()
+			myWindow.Content().Refresh()
+		case fyne.KeyF11:
 			myWindow.SetFullScreen(!myWindow.FullScreen())
 		}
 	})

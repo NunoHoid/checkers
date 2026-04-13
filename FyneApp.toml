@@ -1,0 +1,6 @@
+[Details]
+  Icon = "icon.png"
+  Name = "Checkers"
+  ID = "com.nunohoid.checkers"
+  Version = "0.1"
+  Build = 1

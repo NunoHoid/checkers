@@ -221,14 +221,7 @@ func newTile(idx, jdx int) *Tile {
 		change: Equal,
 	}
 	tile.ExtendBaseWidget(tile)
-	switch board[idx][jdx] {
-	case game.BPawn:
-		tile.SetResource(assets.BPawn)
-	case game.Empty:
-		tile.SetResource(assets.Brown)
-	case game.WPawn:
-		tile.SetResource(assets.WPawn)
-	}
+	tile.changeReset()
 	return tile
 }
 
